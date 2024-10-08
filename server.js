@@ -8,6 +8,12 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
+
+//Initial Route providing instructions
+app.get('/', (req,res) => {
+    return res.end("Hello there welcome to my API");
+});
+
 // All the Routes performing Create, Read, Update operations on Products collection in MongoDB
 // Get all products from the DB
 app.get('/products', async(req,res) => {
