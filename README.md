@@ -23,19 +23,21 @@ This project is a RESTful API built with Node.js and Express.js, designed to man
 
 ## API Endpoints
 
+### BASE URL: https://nodeapi-218d.onrender.com
+
 ### GET /
 - **Description:** Returns a welcome message.
 - **Response:**
   - 200 OK
   - Body: `Hello there welcome to my API`
 
-### GET /products
+### GET /api/products
 - **Description:** Fetches all products from the database.
 - **Response:**
   - 200 OK
   - Body: Array of product objects
 
-### GET /products/:id
+### GET /api/products/:id
 - **Description:** Fetches a product by its ID.
 - **Parameters:**
   - `id`: The ID of the product to retrieve.
@@ -44,7 +46,7 @@ This project is a RESTful API built with Node.js and Express.js, designed to man
   - Body: Product object
   - 404 Not Found (if no product is found with the given ID)
 
-### POST /products
+### POST /api/products
 - **Description:** Adds a new product to the database.
 - **Request Body:**
   - JSON object containing product details (e.g., name, price, description)
@@ -53,7 +55,7 @@ This project is a RESTful API built with Node.js and Express.js, designed to man
   - Body: Created product object
   - 500 Internal Server Error (if there is an error during creation)
 
-### PUT /products/:id
+### PUT /api/products/:id
 - **Description:** Updates an existing product by its ID.
 - **Parameters:**
   - `id`: The ID of the product to update.
@@ -65,7 +67,7 @@ This project is a RESTful API built with Node.js and Express.js, designed to man
   - 404 Not Found (if no product is found with the given ID)
   - 500 Internal Server Error (if there is an error during the update)
 
-### DELETE /products/:id
+### DELETE /api/products/:id
 - **Description:** Deletes a product by its ID.
 - **Parameters:**
   - `id`: The ID of the product to delete.
